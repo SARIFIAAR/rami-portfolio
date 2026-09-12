@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rami — Architecture &amp; Interior Design</title>
+  <meta name="description" content="Rami is an architect and interior designer delivering buildings, workplaces, gyms, retail, exhibition stands, furniture and interiors across the Gulf.">
+  <meta property="og:title" content="Rami — Architecture & Interior Design">
+  <meta property="og:description" content="From the concrete shell to the last chair. Architecture, interiors and furniture across the Gulf.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,400;9..144,500&family=Hanken+Grotesk:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main">
+      <a class="wordmark" href="#top">Rami<span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#practice">Practice</a>
+        <a href="#about">About</a>
+      </div>
+      <a class="btn btn-solid nav-cta" href="#contact">Start a project</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <h1 class="hero-title">
+        <span class="line"><span class="line-inner">From the concrete shell</span></span>
+        <span class="line"><span class="line-inner">to the last chair.</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lede">
+          Rami is an architect and interior designer who has led large building
+          projects and the spaces inside them — residential, corporate offices,
+          gyms, shops, exhibition stands and the furniture they hold — from first
+          sketch to handover.
+        </p>
+        <div class="hero-meta">
+          <p><span class="mono">15+</span> years in practice</p>
+          <p><span class="mono">120</span> projects delivered</p>
+          <p>Based in Dubai, working across the Gulf</p>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80"
+             alt="Daylit double-height living space with warm timber and stone finishes" width="2000" height="1333">
+        <figcaption>
+          <span>Palm Penthouse, Dubai</span>
+          <span class="mono">Interior fit-out, 480 m²</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p class="section-note">Photography shown is placeholder imagery, to be replaced with project photos.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects by discipline">
+        <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="construction" aria-pressed="false">Construction</button>
+        <button class="chip" data-filter="residential" aria-pressed="false">Residential</button>
+        <button class="chip" data-filter="offices" aria-pressed="false">Offices</button>
+        <button class="chip" data-filter="gyms" aria-pressed="false">Gyms</button>
+        <button class="chip" data-filter="retail" aria-pressed="false">Retail</button>
+        <button class="chip" data-filter="exhibitions" aria-pressed="false">Exhibitions</button>
+        <button class="chip" data-filter="interiors" aria-pressed="false">Interiors</button>
+        <button class="chip" data-filter="furniture" aria-pressed="false">Furniture</button>
+      </div>
+
+      <div class="grid" id="grid">
+
+        <article class="card span-7" data-cat="construction">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=80"
+                 alt="White concrete tower facade against a clear sky" loading="lazy" width="1400" height="933">
+          </figure>
+          <div class="card-info">
+            <h3>Marasi Tower</h3>
+            <p>Building construction, Dubai 2023</p>
+            <p class="mono">42,000 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-5" data-cat="residential">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+                 alt="Modern villa exterior with pool at dusk" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Villa Al Barari</h3>
+            <p>Residential, Dubai 2024</p>
+            <p class="mono">1,150 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="offices">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                 alt="Open-plan office with timber partitions and soft daylight" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Meydan Corporate HQ</h3>
+            <p>Corporate offices, Dubai 2022</p>
+            <p class="mono">6,400 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="gyms">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+                 alt="Training floor of a gym with free-weight zones" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Onyx Fitness Club</h3>
+            <p>Gym, Abu Dhabi 2023</p>
+            <p class="mono">2,300 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="retail">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80"
+                 alt="Boutique interior with warm lighting and open rails" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Aylin Boutique</h3>
+            <p>Commercial shop, Doha 2024</p>
+            <p class="mono">340 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-5" data-cat="exhibitions">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=1200&q=80"
+                 alt="Bright exhibition space with white display walls" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>GITEX Pavilion</h3>
+            <p>Exhibition stand, Dubai 2025</p>
+            <p class="mono">600 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-7" data-cat="interiors residential">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80"
+                 alt="Living room in muted tones with stone feature wall" loading="lazy" width="1400" height="933">
+          </figure>
+          <div class="card-info">
+            <h3>Palm Penthouse</h3>
+            <p>Interior design, Dubai 2025</p>
+            <p class="mono">480 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="furniture">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&w=1200&q=80"
+                 alt="Sculpted lounge chair in pale upholstery" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Terra Seating Collection</h3>
+            <p>Furniture design, 2024</p>
+            <p class="mono">6 pieces</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="offices">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
+                 alt="Meeting suite with glazed partitions" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Riyadh Front Offices</h3>
+            <p>Corporate offices, Riyadh 2024</p>
+            <p class="mono">3,800 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-4" data-cat="gyms">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80"
+                 alt="Dim training studio with rack line" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Pulse Gym</h3>
+            <p>Gym, Sharjah 2022</p>
+            <p class="mono">1,600 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-5" data-cat="interiors">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+                 alt="Apartment interior with linen sofa and oak floor" loading="lazy" width="1200" height="800">
+          </figure>
+          <div class="card-info">
+            <h3>Noor Apartment</h3>
+            <p>Interior design, Dubai 2023</p>
+            <p class="mono">260 m²</p>
+          </div>
+        </article>
+
+        <article class="card span-7" data-cat="furniture">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=1400&q=80"
+                 alt="Oak desk with brass detailing in a workspace" loading="lazy" width="1400" height="933">
+          </figure>
+          <div class="card-info">
+            <h3>Oak &amp; Brass Workline</h3>
+            <p>Furniture design, 2023</p>
+            <p class="mono">4 pieces</p>
+          </div>
+        </article>
+
+      </div>
+      <p class="grid-empty" id="grid-empty" hidden>No projects in this discipline yet.</p>
+    </section>
+
+    <!-- ============ PRACTICE (sheet index) ============ -->
+    <section class="practice" id="practice">
+      <div class="section-head">
+        <h2>Practice</h2>
+        <p class="section-note">Eight disciplines, indexed the way a drawing set is.</p>
+      </div>
+      <ul class="index">
+        <li>
+          <span class="mono index-code">A-01</span>
+          <h3>Building construction</h3>
+          <p>Managing full building projects from permits and structure through to handover.</p>
+        </li>
+        <li>
+          <span class="mono index-code">A-02</span>
+          <h3>Residential</h3>
+          <p>Villas, penthouses and apartment buildings designed for the way people actually live.</p>
+        </li>
+        <li>
+          <span class="mono index-code">C-01</span>
+          <h3>Corporate offices</h3>
+          <p>Headquarters and workplaces planned around daylight, acoustics and how teams move.</p>
+        </li>
+        <li>
+          <span class="mono index-code">C-02</span>
+          <h3>Commercial shops</h3>
+          <p>Retail spaces where the layout sells as much as the shelves do.</p>
+        </li>
+        <li>
+          <span class="mono index-code">C-03</span>
+          <h3>Gyms</h3>
+          <p>Training floors zoned for flow, ventilation and equipment loads.</p>
+        </li>
+        <li>
+          <span class="mono index-code">E-01</span>
+          <h3>Exhibition stands</h3>
+          <p>Fast-build stands that carry a brand for four loud days, then disappear.</p>
+        </li>
+        <li>
+          <span class="mono index-code">I-01</span>
+          <h3>Interior design</h3>
+          <p>Complete interiors: materials, lighting, joinery and the details in between.</p>
+        </li>
+        <li>
+          <span class="mono index-code">F-01</span>
+          <h3>Furniture design</h3>
+          <p>Custom pieces drawn for a specific room when nothing off the shelf fits it.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <figure class="about-figure">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
+             alt="Architectural drawings and drafting tools on a worktable" loading="lazy" width="1200" height="800">
+      </figure>
+      <div class="about-text">
+        <h2>One person from sketch to handover</h2>
+        <p>
+          Most projects split between an architect, an interior designer and a
+          contractor who have never met. Rami has spent fifteen years doing all
+          three jobs on the same projects — which is why his buildings feel
+          finished on the inside, and his interiors survive contact with the site.
+        </p>
+        <p>
+          He has managed construction of towers and villas, fitted out offices
+          and gyms, built shops and exhibition stands on impossible deadlines,
+          and drawn furniture when the room asked for it.
+        </p>
+        <a class="btn btn-outline" href="#contact">Work with Rami</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Have a site, a shell,<br>or just an idea?</h2>
+      <p class="contact-lede">Send the brief as it exists today — a plot plan, a floor plate, or a sentence.</p>
+      <div class="contact-actions">
+        <a class="btn btn-solid" href="mailto:hello@rami.design">hello@rami.design</a>
+        <a class="btn btn-outline" href="tel:+971500000000">+971 50 000 0000</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER (title block) ============ -->
+  <footer class="titleblock" aria-label="Site information">
+    <div class="tb-cell tb-wide">
+      <span class="tb-label">Project</span>
+      <span>Portfolio — Rami, Architecture &amp; Interior Design</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Location</span>
+      <span>Dubai, UAE</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Sheet</span>
+      <span class="mono">W-01</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Revision</span>
+      <span class="mono">A</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Date</span>
+      <span class="mono" id="tb-year">2026</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
