@@ -1,17 +1,19 @@
-/* Rami — Architecture & Interior Design
-   Palette: bone canvas, ink, stone gray, drafting blue. */
+/* RAMI Decoration — Design & Fit Out
+   Brand palette: ink navy, bronze gold, champagne, ivory (see brand/rami/). */
 
 :root {
-  --bone: #FAF9F7;
+  --bone: #FAF7F1;
   --white: #FFFFFF;
-  --ink: #171614;
-  --stone: #7B776F;
-  --hairline: #E7E4DE;
-  --blue: #2743A6;
-  --blue-pale: #EDF0FA;
+  --ink: #0E2A52;
+  --stone: #8A8272;
+  --hairline: #DDD3C0;
+  --blue: #B49B6C;
+  --blue-pale: #F3EDE0;
+  --champagne: #EDE4D4;
+  --rami-blue: #004CAA;
 
-  --serif: 'Fraunces', Georgia, serif;
-  --sans: 'Hanken Grotesk', 'Helvetica Neue', sans-serif;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Montserrat', 'Helvetica Neue', sans-serif;
   --mono: 'Spline Sans Mono', 'SF Mono', monospace;
 
   --pad: clamp(20px, 5vw, 72px);
@@ -37,9 +39,9 @@ a { color: inherit; }
 
 h2 {
   font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(28px, 3.6vw, 44px);
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  font-size: clamp(30px, 3.8vw, 46px);
+  letter-spacing: 0.01em;
   line-height: 1.1;
 }
 
@@ -69,7 +71,7 @@ h2 {
 .btn:active { transform: scale(0.98); }
 
 .btn-solid { background: var(--ink); color: var(--white); }
-.btn-solid:hover { background: #33312D; }
+.btn-solid:hover { background: #1C3E6E; }
 
 .btn-outline {
   border: 1px solid var(--hairline);
@@ -83,7 +85,7 @@ h2 {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(250, 249, 247, 0.86);
+  background: rgba(250, 247, 241, 0.88);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
@@ -99,14 +101,17 @@ h2 {
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 11px;
   font-family: var(--serif);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 7px;
   text-decoration: none;
   margin-right: auto;
 }
-.wordmark-dot { color: var(--blue); }
+.wordmark svg { width: 30px; flex: none; }
 
 .nav-links { display: flex; gap: 26px; }
 .nav-links a {
@@ -124,7 +129,7 @@ h2 {
 
 .hero-title {
   font-family: var(--serif);
-  font-weight: 340;
+  font-weight: 500;
   font-size: clamp(44px, 8.2vw, 118px);
   line-height: 1.04;
   letter-spacing: -0.03em;
@@ -157,7 +162,7 @@ h2 {
 .hero-lede { max-width: 52ch; color: var(--stone); }
 
 .hero-meta { color: var(--stone); font-size: 15px; text-align: right; }
-.hero-meta .mono { color: var(--ink); }
+.hero-meta .mono { color: var(--blue); }
 
 .hero-figure {
   margin-top: clamp(36px, 6vh, 72px);
