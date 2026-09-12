@@ -103,8 +103,28 @@ if (!reduceMotion && matchMedia('(hover: hover) and (pointer: fine)').matches) {
   });
 }
 
+// Hero background slideshow: restaurants, retail, villa interiors, outdoor
+const slides = [...document.querySelectorAll('.hero-slide')];
+const slideLabel = document.getElementById('slide-label-text');
+if (slides.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    const next = (current + 1) % slides.length;
+    slides[current].classList.remove('is-active');
+    slides[next].classList.add('is-active');
+    current = next;
+    if (slideLabel) {
+      slideLabel.classList.add('is-fading');
+      setTimeout(() => {
+        slideLabel.textContent = slides[next].dataset.label;
+        slideLabel.classList.remove('is-fading');
+      }, 500);
+    }
+  }, 5200);
+}
+
 // Gentle parallax on the hero background
-const heroBg = document.querySelector('.hero-bg img');
+const heroBg = document.querySelector('.hero-bg');
 if (heroBg && !reduceMotion) {
   addEventListener('scroll', () => {
     const y = Math.min(scrollY, innerHeight);

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -32,10 +32,19 @@
     <!-- ============ HERO ============ -->
     <section class="hero-dark">
       <div class="hero-bg" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=80"
-             alt="" width="2000" height="1333">
+        <img class="hero-slide is-active" data-label="RESTAURANTS"
+             src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1800&q=80" alt="" width="1800" height="1200">
+        <img class="hero-slide" data-label="COMMERCIAL RETAIL"
+             src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" width="1800" height="1200">
+        <img class="hero-slide" data-label="VILLA INTERIORS"
+             src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" width="1800" height="1200">
+        <img class="hero-slide" data-label="VILLA ON THE PALM — OUTDOOR"
+             src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" width="1800" height="1200">
+        <img class="hero-slide" data-label="WATERFRONT DINING"
+             src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy" width="1800" height="1200">
       </div>
       <div class="hero-veil" aria-hidden="true"></div>
+      <p class="slide-label" aria-hidden="true"><span class="slide-label-rule"></span><span id="slide-label-text">RESTAURANTS</span></p>
       <div class="hero-content">
         <p class="hero-eyebrow">RAMI DECORATION — DESIGN &amp; FIT OUT, DUBAI</p>
         <h1 class="hero-title">
@@ -338,6 +347,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
