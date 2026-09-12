@@ -400,3 +400,110 @@ section { padding: clamp(72px, 11vh, 140px) var(--pad) 0; }
   .card.reveal { opacity: 1; transform: none; }
   .card img { transition: none; }
 }
+
+/* ---------- Cinematic navy hero ---------- */
+
+.hero-dark {
+  position: relative;
+  min-height: 94vh;
+  display: flex;
+  align-items: center;
+  background: var(--ink);
+  color: #F5EFE4;
+  overflow: hidden;
+  padding: 120px var(--pad) 90px;
+}
+
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img {
+  width: 100%; height: 100%; object-fit: cover;
+  opacity: 0.55;
+  transform: scale(1.08);
+  animation: kenburns 26s var(--ease-out) forwards;
+}
+@keyframes kenburns { to { transform: scale(1.0); } }
+
+.hero-veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(14,42,82,0.42) 0%, rgba(14,42,82,0.55) 55%, rgba(10,30,60,0.88) 100%);
+}
+
+.hero-content { position: relative; max-width: 1160px; width: 100%; margin: 0 auto; }
+
+.hero-eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: 5px;
+  color: var(--blue);
+  margin-bottom: 26px;
+  opacity: 0;
+  animation: appear 700ms var(--ease-out) 200ms forwards;
+}
+
+.hero-dark .hero-title { color: #F5EFE4; text-shadow: 0 2px 30px rgba(10,25,50,0.4); }
+
+.gold-rule {
+  width: 120px; height: 1px; background: var(--blue);
+  margin-top: 30px;
+  transform: scaleX(0); transform-origin: left;
+  animation: drawrule 900ms var(--ease-out) 700ms forwards;
+}
+@keyframes drawrule { to { transform: scaleX(1); } }
+
+.hero-dark .hero-lede { color: rgba(245,239,228,0.82); }
+.hero-dark .hero-meta { color: rgba(245,239,228,0.72); }
+.hero-dark .hero-meta .mono { color: var(--blue); }
+
+.scroll-cue {
+  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+  font-size: 9px; letter-spacing: 4px; color: rgba(245,239,228,0.55);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.scroll-cue span {
+  display: block; width: 1px; height: 34px;
+  background: linear-gradient(180deg, var(--blue), transparent);
+  animation: cue 2.2s ease-in-out infinite;
+}
+@keyframes cue { 0%,100% { transform: scaleY(0.4); opacity:.4 } 50% { transform: scaleY(1); opacity:1 } }
+
+/* ---------- Scroll reveals & drawn rules ---------- */
+
+.reveal-up { opacity: 0; transform: translateY(22px); }
+.reveal-up.is-in {
+  opacity: 1; transform: none;
+  transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
+}
+
+.section-head { position: relative; }
+.section-head::after {
+  content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px;
+  background: var(--blue);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 1100ms var(--ease-out) 150ms;
+}
+.section-head.is-in::after { transform: scaleX(1); }
+
+/* ---------- 3D card tilt ---------- */
+
+.card { perspective: 900px; }
+.card figure {
+  transform-style: preserve-3d;
+  transition: transform 500ms var(--ease-out), box-shadow 500ms var(--ease-out);
+  will-change: transform;
+}
+.card figure.is-tilting { transition: transform 80ms linear; }
+.card:hover figure { box-shadow: 0 18px 44px rgba(14,42,82,0.16); }
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg img, .gold-rule, .hero-eyebrow, .scroll-cue span { animation: none; }
+  .hero-bg img { transform: none; }
+  .gold-rule { transform: none; }
+  .hero-eyebrow { opacity: 1; }
+  .reveal-up { opacity: 1; transform: none; }
+  .section-head::after { transform: scaleX(1); transition: none; }
+  .card figure { transition: none; }
+}
+
+@media (max-width: 620px) {
+  .hero-dark { min-height: 88vh; padding-top: 90px; }
+}
